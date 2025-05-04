@@ -12,7 +12,6 @@ public class CameraController : Singleton<CameraController>
       var targetPosition = Player.Instance.transform.position + cameraOffset;
       transform.position = Vector3.Lerp(transform.position, targetPosition,
          Time.deltaTime * speed);
-      transform.LookAt(Player.Instance.transform.position);
    }
 
    public void OverwriteCameraOffset(Vector3 cameraOffset)

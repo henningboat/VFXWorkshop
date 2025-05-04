@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundBackStrength: 8
+  _damageParticles: {fileID: 3211025769983816479, guid: 59cf615a4c17cff4bb282e62a8154e97, type: 3}
 --- !u!1001 &7200536518430129193
 PrefabInstance:
   m_ObjectHideFlags: 0
