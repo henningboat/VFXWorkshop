@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Car : MonoBehaviour
 {
@@ -9,7 +10,11 @@ public class Car : MonoBehaviour
      public Gradient colorTintGradient;
      public AnimationCurve boostScale = AnimationCurve.Constant(0, 1, 0);
      public float boostJumpHeight = 0;
-    
+
+     [SerializeField] UnityEvent _onBoost;
+
+     
+     
     Rigidbody _rigidbody;
     Renderer _mainRenderer;
     bool _isBoosting;
@@ -44,6 +49,7 @@ public class Car : MonoBehaviour
         if (other.CompareTag("Booster"))
         {
             _isBoosting = true;
+            _onBoost.Invoke();
         }
     }
 
